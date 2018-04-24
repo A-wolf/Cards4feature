@@ -26,7 +26,7 @@ public class CardDeck extends Group {
 				this.suit = "Clubs";
 		}
 
-		if (2 <= value && value <= 14) {
+		if (1 <= value && value <= 12) {
 			this.value = value;
 		}
 
@@ -38,9 +38,7 @@ public class CardDeck extends Group {
 			valueText.setText("Knight");
 		else if (value == 12)
 			valueText.setText("Queen");
-		else if (value == 13)
-			valueText.setText("King");
-		else if (value == 14)
+		else if (value == 1)
 			valueText.setText("Ace");
 		else
 			valueText.setText(value + "");
