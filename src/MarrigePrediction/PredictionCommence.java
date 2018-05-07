@@ -1,5 +1,7 @@
 package MarrigePrediction;
 
+import java.util.Scanner;
+
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -9,12 +11,35 @@ import javafx.stage.Stage;
 
 public class PredictionCommence extends Application {
 
-	public static final double MARGIN = 20;
-	public static final double WIDTH = Card.WIDTH + MARGIN;
-	public static final double HEIGHT = Card.HEIGHT + MARGIN;
+	public static final double WIDTH = 1200;
+	public static final double HEIGHT = 700;
 
 	public static void main(String[] args) {
+
+		System.out.println("Enter 4 names of the possible marraige canidents");
+
+		Scanner S = new Scanner(System.in);
+
+		String Spade = S.next();
+
+		Scanner C = new Scanner(System.in);
+
+		String Clover = C.next();
+
+		Scanner H = new Scanner(System.in);
+
+		String Hearts = H.next();
+
+		Scanner D = new Scanner(System.in);
+
+		String Dimonds = D.next();
+
+		System.out.println(Clover + " " + Hearts + " " + Dimonds + " " + Spade);
+
+		System.out.println();
+
 		launch();
+
 	}
 
 	@Override
