@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -52,12 +53,13 @@ public class PredictionCommence extends Application {
 
 		Scene scene = new Scene(root, WIDTH, HEIGHT, Color.SKYBLUE);
 
-		scene.setOnKeyPressed(event -> {
+		scene.setOnMouseClicked(event -> {
 
-			if (event.getCode() == KeyCode.SPACE) {
+			if (event.getButton() == MouseButton.PRIMARY) {
 
 				root.getChildren().add(deck.draw());
 			}
+
 		});
 
 		primaryStage.setScene(scene);
