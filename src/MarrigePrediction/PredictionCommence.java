@@ -36,11 +36,16 @@ public class PredictionCommence extends Application {
 		String Dimonds = D.next();
 
 		System.out.println(Clover + " " + Hearts + " " + Dimonds + " " + Spade);
-
+		
 		System.out.println();
 
 		launch();
 
+	//stopping leaking keep at bottom//
+		S.close();
+		C.close();
+		H.close();
+		D.close();
 	}
 
 	@Override
