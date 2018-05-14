@@ -11,12 +11,8 @@ public class Kings {
 
 		for (int j = 1; j < 5; j++) {
 
-			for (int i = 1; i < 5; i++) {
-
-				KingsCards c = new KingsCards(j, i);
-				Kings.add(c);
-
-			}
+			KingsCards c = new KingsCards(j, 13);
+			Kings.add(c);
 
 		}
 
