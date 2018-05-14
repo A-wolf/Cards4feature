@@ -53,8 +53,11 @@ public class PredictionCommence extends Application {
 
 		Group root = new Group();
 
-		Future deck = new Future();
-		deck.shuffle();
+		// Future deck = new Future();
+		// deck.shuffle();
+
+		Kings deck = new Kings();
+		deck.royalshuffle();
 
 		Scene scene = new Scene(root, WIDTH * 16, HEIGHT * 4.66, Color.SKYBLUE);
 
@@ -62,7 +65,9 @@ public class PredictionCommence extends Application {
 
 			if (event.getButton() == MouseButton.PRIMARY) {
 
-				root.getChildren().add(deck.draw());
+				root.getChildren().add(deck.royaldraw());
+
+				// root.getChildren().add(deck.draw());
 			}
 
 		});

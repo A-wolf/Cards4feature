@@ -36,7 +36,7 @@ public class KingsCards extends Group {
 			break;
 		}
 
-		if (b >= 2 && b <= 13) {
+		if (b >= 1 && b <= 4) {
 
 			value = b;
 
