@@ -56,7 +56,17 @@ public class PredictionCommence extends Application {
 		Future deck = new Future();
 		deck.shuffle();
 
+		Kings royaldeck = new Kings();
+		royaldeck.royalshuffle();
+
 		Scene scene = new Scene(root, WIDTH * 16, HEIGHT * 4.66, Color.SKYBLUE);
+
+		for (int i = 0; i < 4; i++) {
+			KingsCards royalcard = royaldeck.royaldraw();
+			royalcard.setTranslateX(i * 150);
+			root.getChildren().add(royalcard);
+
+		}
 
 		scene.setOnMouseClicked(event -> {
 
