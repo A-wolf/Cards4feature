@@ -64,6 +64,7 @@ public class PredictionCommence extends Application {
 		for (int i = 0; i < 4; i++) {
 			KingsCards royalcard = royaldeck.royaldraw();
 			royalcard.setTranslateX(i * 150);
+
 			root.getChildren().add(royalcard);
 
 		}
@@ -72,7 +73,17 @@ public class PredictionCommence extends Application {
 
 			if (event.getButton() == MouseButton.PRIMARY) {
 
+				int k = 0;
+
+				k++;
+
+				Card card = deck.draw();
+
+				card.setTranslateX(k * 150);
+				card.setTranslateY(k * 150);
+
 				root.getChildren().add(deck.draw());
+
 			}
 
 		});
