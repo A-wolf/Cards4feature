@@ -5,15 +5,14 @@ import java.util.Scanner;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class PredictionCommence extends Application {
 
-	public static final double WIDTH = 1200;
-	public static final double HEIGHT = 700;
+	public static final double WIDTH = 75;
+	public static final double HEIGHT = 150;
 
 	public static void main(String[] args) {
 
@@ -35,13 +34,14 @@ public class PredictionCommence extends Application {
 
 		String Dimonds = D.next();
 
+		// debugging //
 		System.out.println(Clover + " " + Hearts + " " + Dimonds + " " + Spade);
-		
+
 		System.out.println();
 
 		launch();
 
-	//stopping leaking keep at bottom//
+		// stopping leaking keep at bottom //
 		S.close();
 		C.close();
 		H.close();
@@ -56,7 +56,7 @@ public class PredictionCommence extends Application {
 		Future deck = new Future();
 		deck.shuffle();
 
-		Scene scene = new Scene(root, WIDTH, HEIGHT, Color.SKYBLUE);
+		Scene scene = new Scene(root, WIDTH * 16, HEIGHT * 4.66, Color.SKYBLUE);
 
 		scene.setOnMouseClicked(event -> {
 

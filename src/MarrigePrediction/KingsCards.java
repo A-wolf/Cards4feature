@@ -5,7 +5,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
-public class Card extends Group {
+public class KingsCards extends Group {
 
 	String color;
 
@@ -15,7 +15,7 @@ public class Card extends Group {
 
 	public static final double HEIGHT = 150;
 
-	public Card(int a, int b) {
+	public KingsCards(int a, int b) {
 
 		switch (a) {
 
@@ -48,20 +48,8 @@ public class Card extends Group {
 		Text TheCardValue = new Text();
 		switch (value) {
 
-		case 11:
-			TheCardValue.setText("Knight");
-			break;
-
-		case 12:
-			TheCardValue.setText("Queen");
-			break;
-
-		case 13:
-			TheCardValue.setText("Ace");
-			break;
-
 		default:
-			TheCardValue.setText("" + value);
+			TheCardValue.setText("" + "King");
 			break;
 
 		}
@@ -79,18 +67,4 @@ public class Card extends Group {
 
 		this.getChildren().addAll(background, TheCardColor, TheCardValue);
 	}
-
-	public boolean RedOrBlack() {
-
-		if (color.equals("Spades") || color.equals("Clover")) {
-			return false;
-		}
-
-		else {
-
-			return true;
-		}
-
-	}
-
 }
