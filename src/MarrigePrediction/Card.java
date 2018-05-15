@@ -7,7 +7,7 @@ import javafx.scene.text.Text;
 
 public class Card extends Group {
 
-	String color;
+	static String color;
 
 	int value;
 
@@ -80,7 +80,7 @@ public class Card extends Group {
 		this.getChildren().addAll(background, TheCardColor, TheCardValue);
 	}
 
-	public boolean RedOrBlack() {
+	public static boolean RedOrBlack() {
 
 		if (color.equals("Spades") || color.equals("Clover")) {
 			return false;

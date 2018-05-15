@@ -58,39 +58,95 @@ public class PredictionCommence extends Application {
 		deck.shuffle();
 
 		Kings royaldeck = new Kings();
-		royaldeck.royalshuffle();
 
 		Scene scene = new Scene(root, WIDTH * 16, HEIGHT * 4.66, Color.SKYBLUE);
 
 		for (int i = 0; i < 4; i++) {
 			KingsCards royalcard = royaldeck.royaldraw();
-			royalcard.setTranslateX(i * 150 );
+			royalcard.setTranslateX(i * 150);
 
 			root.getChildren().add(royalcard);
 
+			primaryStage.setScene(scene);
+			primaryStage.show();
+
 		}
 
-		scene.setOnMouseClicked(event -> {
+		for (int i = 0; i < 4; i++) {
 
-			if (event.getButton() == MouseButton.PRIMARY) {
+			scene.setOnMouseClicked(event -> {
 
+				if (event.getButton() == MouseButton.PRIMARY) {
 
-				k++;
+					int c = 1;
+					int jh = 0;
 
-				Card card = deck.draw();
+					for (int i2 = 0; i2 < 12; i2 = +0) {
 
-				card.setTranslateX(k * 150 -150  );
-				card.setTranslateY(300);
+						Card card = deck.draw();
+						root.getChildren().add(card);
+						card.setTranslateX(k * 150 - 150);
+						card.setTranslateY(c * 150 + 150);
 
-				root.getChildren().add(card);
+						if (Card.RedOrBlack() == true) {
 
-			}
+							jh = 1;
 
-		});
+							c++;
 
-		primaryStage.setScene(scene);
-		primaryStage.show();
+						} else {
 
+							jh = 0;
+
+							c++;
+
+						}
+					}
+
+					int ch = 0;
+
+					for (int i1 = 0; i1 < 12; i1 = +0) {
+
+						Card card = deck.draw();
+						root.getChildren().add(card);
+						card.setTranslateX(k * 150 - 150);
+						card.setTranslateY(c * 150 + 150);
+
+						if (Card.RedOrBlack() == true) {
+
+							ch++;
+
+							c++;
+
+						} else {
+
+							i1 = 42;
+
+						}
+
+						if (jh == 1) {
+
+							System.out.println("Hearts has a job and wants" + " " + ch + " " + "children");
+
+						} else {
+
+							System.out.println("Hearts don't have a job and wants" + " " + ch + " " + "children");
+
+						}
+
+						k++;
+
+					}
+				}
+
+				;
+
+				primaryStage.setScene(scene);
+				primaryStage.show();
+
+			});
+
+		}
 	}
 
 }
