@@ -114,8 +114,6 @@ public class PredictionCommence extends Application {
 					card.setTranslateX(k * 150 - 75);
 					card.setTranslateY(c * 150 - 150);
 
-					System.out.println(i1);
-
 					if (Card.RedOrBlack() == true) {
 
 						ch++;
@@ -142,6 +140,8 @@ public class PredictionCommence extends Application {
 					System.out.println("Hearts don't have a job and wants" + " " + ch + " " + "children");
 
 				}
+
+				System.out.println("end");
 
 			}
 			;
