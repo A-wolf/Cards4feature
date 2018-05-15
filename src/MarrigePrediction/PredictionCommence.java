@@ -49,6 +49,7 @@ public class PredictionCommence extends Application {
 		D.close();
 	}
 
+	@SuppressWarnings("unused")
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 
@@ -79,6 +80,7 @@ public class PredictionCommence extends Application {
 				int c = 1;
 				int jh = 0;
 				int ch = 0;
+				int k = 1;
 
 				for (int i = 0; i < 12; i = +0) {
 					Card card = deck.draw();
@@ -92,6 +94,8 @@ public class PredictionCommence extends Application {
 
 						c++;
 
+						break;
+
 					} else {
 
 						jh = 0;
@@ -99,6 +103,8 @@ public class PredictionCommence extends Application {
 						c++;
 
 						i = 42;
+
+						break;
 
 					}
 				}
@@ -108,7 +114,7 @@ public class PredictionCommence extends Application {
 					Card card = deck.draw();
 					root.getChildren().add(card);
 					card.setTranslateX(k * 150 - 75);
-					card.setTranslateY(c * 150 + 150);
+					card.setTranslateY(c * 150 - 150);
 
 					if (Card.RedOrBlack() == true) {
 
@@ -120,19 +126,18 @@ public class PredictionCommence extends Application {
 
 						i1 = 42;
 
-					}
-
-					if (jh == 1) {
-
-						System.out.println("Hearts has a job and wants" + " " + ch + " " + "children");
-
-					} else {
-
-						System.out.println("Hearts don't have a job and wants" + " " + ch + " " + "children");
+						break;
 
 					}
 
-					k++;
+				}
+				if (jh == 1) {
+
+					System.out.println("Hearts has a job and wants" + " " + ch + " " + "children");
+
+				} else {
+
+					System.out.println("Hearts don't have a job and wants" + " " + ch + " " + "children");
 
 				}
 
