@@ -13,6 +13,7 @@ public class PredictionCommence extends Application {
 
 	public static final double WIDTH = 75;
 	public static final double HEIGHT = 150;
+	int k = 0;
 
 	public static void main(String[] args) {
 
@@ -63,7 +64,7 @@ public class PredictionCommence extends Application {
 
 		for (int i = 0; i < 4; i++) {
 			KingsCards royalcard = royaldeck.royaldraw();
-			royalcard.setTranslateX(i * 150);
+			royalcard.setTranslateX(i * 150 );
 
 			root.getChildren().add(royalcard);
 
@@ -73,16 +74,15 @@ public class PredictionCommence extends Application {
 
 			if (event.getButton() == MouseButton.PRIMARY) {
 
-				int k = 0;
 
 				k++;
 
 				Card card = deck.draw();
 
-				card.setTranslateX(k * 150);
-				card.setTranslateY(k * 150);
+				card.setTranslateX(k * 150 -150  );
+				card.setTranslateY(300);
 
-				root.getChildren().add(deck.draw());
+				root.getChildren().add(card);
 
 			}
 
