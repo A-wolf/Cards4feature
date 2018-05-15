@@ -72,81 +72,73 @@ public class PredictionCommence extends Application {
 
 		}
 
-		for (int i = 0; i < 4; i++) {
+		scene.setOnMouseClicked(event -> {
 
-			scene.setOnMouseClicked(event -> {
+			if (event.getButton() == MouseButton.PRIMARY) {
 
-				if (event.getButton() == MouseButton.PRIMARY) {
+				int c = 1;
+				int jh = 0;
 
-					int c = 1;
-					int jh = 0;
+				Card card = deck.draw();
+				root.getChildren().add(card);
+				card.setTranslateX(k * 150 - 150);
 
-					for (int i2 = 0; i2 < 12; i2 = +0) {
+				card.setTranslateY(c * 150 + 150);
 
-						Card card = deck.draw();
-						root.getChildren().add(card);
-						card.setTranslateX(k * 150 - 150);
-						card.setTranslateY(c * 150 + 150);
+				for (int i = 0; i < 12; i = +0) {
 
-						if (Card.RedOrBlack() == true) {
+					if (Card.RedOrBlack() == true) {
 
-							jh = 1;
+						jh = 1;
 
-							c++;
+						c++;
 
-						} else {
+					} else {
 
-							jh = 0;
+						jh = 0;
 
-							c++;
-
-						}
-					}
-
-					int ch = 0;
-
-					for (int i1 = 0; i1 < 12; i1 = +0) {
-
-						Card card = deck.draw();
-						root.getChildren().add(card);
-						card.setTranslateX(k * 150 - 150);
-						card.setTranslateY(c * 150 + 150);
-
-						if (Card.RedOrBlack() == true) {
-
-							ch++;
-
-							c++;
-
-						} else {
-
-							i1 = 42;
-
-						}
-
-						if (jh == 1) {
-
-							System.out.println("Hearts has a job and wants" + " " + ch + " " + "children");
-
-						} else {
-
-							System.out.println("Hearts don't have a job and wants" + " " + ch + " " + "children");
-
-						}
-
-						k++;
+						c++;
 
 					}
 				}
 
-				;
+				int ch = 0;
 
-				primaryStage.setScene(scene);
-				primaryStage.show();
+				for (int i1 = 0; i1 < 12; i1 = +0) {
 
-			});
+					if (Card.RedOrBlack() == true) {
 
-		}
+						ch++;
+
+						c++;
+
+					} else {
+
+						i1 = 42;
+
+					}
+
+					if (jh == 1) {
+
+						System.out.println("Hearts has a job and wants" + " " + ch + " " + "children");
+
+					} else {
+
+						System.out.println("Hearts don't have a job and wants" + " " + ch + " " + "children");
+
+					}
+
+					k++;
+
+				}
+
+			}
+			;
+
+			primaryStage.setScene(scene);
+			primaryStage.show();
+
+		});
+
 	}
-
 }
