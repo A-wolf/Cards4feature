@@ -82,7 +82,6 @@ public class PredictionCommence extends Application {
 				Card card = deck.draw();
 				root.getChildren().add(card);
 				card.setTranslateX(k * 150 - 150);
-
 				card.setTranslateY(c * 150 + 150);
 
 				for (int i = 0; i < 12; i = +0) {
@@ -98,6 +97,8 @@ public class PredictionCommence extends Application {
 						jh = 0;
 
 						c++;
+
+						i = 42;
 
 					}
 				}
