@@ -82,13 +82,19 @@ public class Card extends Group {
 
 	public static boolean RedOrBlack() {
 
-		if (color.equals("Spades") || color.equals("Clover")) {
+		if (color.equals("Spade") || color.equals("Clover")) {
 			return false;
+
+		}
+
+		else if (color.equals("Hearts") || color.equals("Dimonds")) {
+			return true;
+
 		}
 
 		else {
 
-			return true;
+			return false;
 		}
 
 	}

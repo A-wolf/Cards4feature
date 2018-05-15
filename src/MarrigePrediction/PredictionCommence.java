@@ -102,19 +102,19 @@ public class PredictionCommence extends Application {
 
 						c++;
 
-						i = 42;
-
 						break;
 
 					}
 				}
 
-				for (int i1 = 0; i1 < 12; i1 = +0) {
+				for (int i1 = 0; i1 <= 99; i1++) {
 
 					Card card = deck.draw();
 					root.getChildren().add(card);
 					card.setTranslateX(k * 150 - 75);
 					card.setTranslateY(c * 150 - 150);
+
+					System.out.println(i1);
 
 					if (Card.RedOrBlack() == true) {
 
@@ -122,9 +122,11 @@ public class PredictionCommence extends Application {
 
 						c++;
 
-					} else {
+					}
 
-						i1 = 42;
+					else {
+
+						i1 = 100;
 
 						break;
 
