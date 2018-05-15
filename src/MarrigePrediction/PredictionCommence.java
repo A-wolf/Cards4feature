@@ -63,7 +63,7 @@ public class PredictionCommence extends Application {
 
 		for (int i = 0; i < 4; i++) {
 			KingsCards royalcard = royaldeck.royaldraw();
-			royalcard.setTranslateX(i * 150);
+			royalcard.setTranslateX(i * 150 + 75);
 
 			root.getChildren().add(royalcard);
 
@@ -78,13 +78,13 @@ public class PredictionCommence extends Application {
 
 				int c = 1;
 				int jh = 0;
-
-				Card card = deck.draw();
-				root.getChildren().add(card);
-				card.setTranslateX(k * 150 - 150);
-				card.setTranslateY(c * 150 + 150);
+				int ch = 0;
 
 				for (int i = 0; i < 12; i = +0) {
+					Card card = deck.draw();
+					root.getChildren().add(card);
+					card.setTranslateX(k * 150 - 75);
+					card.setTranslateY(c * 150 + 150);
 
 					if (Card.RedOrBlack() == true) {
 
@@ -103,9 +103,12 @@ public class PredictionCommence extends Application {
 					}
 				}
 
-				int ch = 0;
-
 				for (int i1 = 0; i1 < 12; i1 = +0) {
+
+					Card card = deck.draw();
+					root.getChildren().add(card);
+					card.setTranslateX(k * 150 - 75);
+					card.setTranslateY(c * 150 + 150);
 
 					if (Card.RedOrBlack() == true) {
 
