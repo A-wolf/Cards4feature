@@ -80,33 +80,4 @@ public class Card extends Group {
 		this.getChildren().addAll(background, TheCardColor, TheCardValue);
 	}
 
-	public static boolean RedOrBlack() {
-
-		if (color.equals("Spade") == true) {
-			return false;
-
-		}
-
-		else if (color.equals("Clover") == true) {
-			return false;
-
-		}
-
-		else if (color.equals("Hearts") == true) {
-			return true;
-
-		}
-
-		else if (color.equals("Dimonds") == true) {
-			return true;
-
-		}
-
-		else {
-
-			return false;
-		}
-
-	}
-
 }

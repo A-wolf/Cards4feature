@@ -88,7 +88,7 @@ public class PredictionCommence extends Application {
 					card.setTranslateX(k * 150 - 75);
 					card.setTranslateY(c * 150 + 150);
 
-					if (Card.RedOrBlack() == true) {
+					if (RedorBlack.RedOrBlack() == 1) {
 
 						jh = 1;
 
@@ -114,7 +114,7 @@ public class PredictionCommence extends Application {
 					card.setTranslateX(k * 150 - 75);
 					card.setTranslateY(c * 150 - 150);
 
-					if (Card.RedOrBlack() == true) {
+					if (RedorBlack.RedOrBlack() == 1) {
 
 						ch++;
 
