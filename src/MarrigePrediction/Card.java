@@ -7,7 +7,7 @@ import javafx.scene.text.Text;
 
 public class Card extends Group {
 
-	static String color;
+	String color;
 
 	int value;
 

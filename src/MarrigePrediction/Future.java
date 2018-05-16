@@ -9,11 +9,11 @@ public class Future {
 
 	public Future() {
 
-		for (int j = 1; j < 5; j++) {
+		for (int a = 1; a < 5; a++) {
 
-			for (int i = 1; i < 14; i++) {
+			for (int b = 1; b < 14; b++) {
 
-				Card c = new Card(j, i);
+				Card c = new Card(a, b);
 				Future.add(c);
 
 			}
