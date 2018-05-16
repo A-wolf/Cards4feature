@@ -141,7 +141,212 @@ public class PredictionCommence extends Application {
 
 				}
 
-				System.out.println("end");
+				c = 1;
+				k = 2;
+				int jd = 0;
+				int cd = 0;
+
+				for (int i = 0; i < 12; i = +0) {
+					Card card = deck.draw();
+					root.getChildren().add(card);
+					card.setTranslateX(k * 150 - 75);
+					card.setTranslateY(c * 150 + 150);
+
+					if (RedorBlack.RedOrBlack(card) == 1) {
+
+						jd = 1;
+
+						c++;
+
+						break;
+
+					} else {
+
+						jd = 0;
+
+						c++;
+
+						break;
+
+					}
+				}
+
+				for (int i1 = 0; i1 <= 99; i1++) {
+
+					Card card = deck.draw();
+					root.getChildren().add(card);
+					card.setTranslateX(k * 150 - 75);
+					card.setTranslateY(c * 150 - 150);
+
+					if (RedorBlack.RedOrBlack(card) == 1) {
+
+						cd++;
+
+						c++;
+
+					}
+
+					else {
+
+						i1 = 100;
+
+						break;
+
+					}
+
+				}
+				if (jd == 1) {
+
+					System.out.println("Dimonds has a job and wants" + " " + cd + " " + "children");
+
+				} else {
+
+					System.out.println("Dimonds don't have a job and wants" + " " + cd + " " + "children");
+
+				}
+
+				c = 1;
+				k = 3;
+				int js = 0;
+				int cs = 0;
+
+				for (int i = 0; i < 12; i = +0) {
+					Card card = deck.draw();
+					root.getChildren().add(card);
+					card.setTranslateX(k * 150 - 75);
+					card.setTranslateY(c * 150 + 150);
+
+					if (RedorBlack.RedOrBlack(card) == 1) {
+
+						js = 1;
+
+						c++;
+
+						break;
+
+					} else {
+
+						js = 0;
+
+						c++;
+
+						break;
+
+					}
+				}
+
+				for (int i1 = 0; i1 <= 99; i1++) {
+
+					Card card = deck.draw();
+					root.getChildren().add(card);
+					card.setTranslateX(k * 150 - 75);
+					card.setTranslateY(c * 150 - 150);
+
+					if (RedorBlack.RedOrBlack(card) == 1) {
+
+						cs++;
+
+						c++;
+
+					}
+
+					else {
+
+						i1 = 100;
+
+						break;
+
+					}
+
+				}
+				if (js == 1) {
+
+					System.out.println("Spades has a job and wants" + " " + cs + " " + "children");
+
+				} else {
+
+					System.out.println("Spades don't have a job and wants" + " " + cs + " " + "children");
+
+				}
+
+				c = 1;
+				k = 4;
+				int jc = 0;
+				int cc = 0;
+
+				for (int i = 0; i < 12; i = +0) {
+					Card card = deck.draw();
+					root.getChildren().add(card);
+					card.setTranslateX(k * 150 - 75);
+					card.setTranslateY(c * 150 + 150);
+
+					if (RedorBlack.RedOrBlack(card) == 1) {
+
+						jc = 1;
+
+						c++;
+
+						break;
+
+					} else {
+
+						jc = 0;
+
+						c++;
+
+						break;
+
+					}
+				}
+
+				for (int i1 = 0; i1 <= 99; i1++) {
+
+					Card card = deck.draw();
+					root.getChildren().add(card);
+					card.setTranslateX(k * 150 - 75);
+					card.setTranslateY(c * 150 - 150);
+
+					if (RedorBlack.RedOrBlack(card) == 1) {
+
+						cc++;
+
+						c++;
+
+					}
+
+					else {
+
+						i1 = 100;
+
+						break;
+
+					}
+
+				}
+				if (jc == 1) {
+
+					System.out.println("Clover has a job and wants" + " " + cc + " " + "children");
+
+				} else {
+
+					System.out.println("Clover don't have a job and wants" + " " + cc + " " + "children");
+
+				}
+
+				System.out.println("Enter H pick to hearts, D to pick Dimonds, S to pick spades and C to pick clover ");
+
+				Scanner P = new Scanner(System.in);
+
+				String Pick = P.next();
+
+				switch (Pick) {
+				case "H":
+
+					break;
+
+				default:
+					break;
+				}
 
 			}
 			;
