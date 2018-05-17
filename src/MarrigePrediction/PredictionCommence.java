@@ -338,7 +338,6 @@ public class PredictionCommence extends Application {
 				primaryStage.show();
 
 				for (int i = 0; i < 42; i = +i) {
-
 					System.out.println(
 							"Enter H pick to hearts, D to pick Dimonds, S to pick spades and C to pick clover ");
 
