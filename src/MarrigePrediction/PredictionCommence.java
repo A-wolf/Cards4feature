@@ -56,12 +56,15 @@ public class PredictionCommence extends Application {
 		Kings royaldeck = new Kings();
 
 		Scene scene = new Scene(root, WIDTH * 16, HEIGHT * 4.66, Color.SKYBLUE);
+		Group pc = new Group();
+
+		root.getChildren().add(pc);
 
 		for (int i = 0; i < 4; i++) {
 			KingsCards royalcard = royaldeck.royaldraw();
 			royalcard.setTranslateX(i * 150 + 75);
 
-			root.getChildren().add(royalcard);
+			pc.getChildren().add(royalcard);
 
 			primaryStage.setScene(scene);
 			primaryStage.show();
@@ -69,9 +72,6 @@ public class PredictionCommence extends Application {
 		}
 
 		scene.setOnMouseClicked(event -> {
-			Group pc = new Group();
-
-			root.getChildren().add(pc);
 
 			if (event.getButton() == MouseButton.PRIMARY) {
 
@@ -387,6 +387,32 @@ public class PredictionCommence extends Application {
 
 						break;
 					}
+
+					for (int j = 0; j < 42; j = +j) {
+						System.out.println("N is next ");
+
+						Scanner n = new Scanner(System.in);
+
+						String Next = n.next();
+
+						switch (Next) {
+						case "N":
+
+							j = 42;
+
+							pc.getChildren().clear();
+
+							System.out.println("test");
+
+							break;
+
+						default:
+
+							break;
+						}
+
+					}
+
 				}
 			}
 			;
