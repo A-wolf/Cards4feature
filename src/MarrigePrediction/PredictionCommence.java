@@ -17,6 +17,14 @@ public class PredictionCommence extends Application {
 
 	public static void main(String[] args) {
 
+		launch();
+
+	}
+
+	@SuppressWarnings({ "unused", "resource" })
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+
 		System.out.println("Enter 4 names of the possible marraige canidents");
 
 		Scanner S = new Scanner(System.in);
@@ -39,19 +47,6 @@ public class PredictionCommence extends Application {
 		System.out.println(Clover + " " + Hearts + " " + Dimonds + " " + Spade);
 
 		System.out.println();
-
-		launch();
-
-		// stopping leaking keep at bottom //
-		S.close();
-		C.close();
-		H.close();
-		D.close();
-	}
-
-	@SuppressWarnings("unused")
-	@Override
-	public void start(Stage primaryStage) throws Exception {
 
 		Group root = new Group();
 
@@ -82,7 +77,7 @@ public class PredictionCommence extends Application {
 				int ch = 0;
 				int k = 1;
 
-				for (int i = 0; i < 12; i = +0) {
+				for (int i = 0; i < 12; i = +i) {
 					Card card = deck.draw();
 					root.getChildren().add(card);
 					card.setTranslateX(k * 150 - 75);
@@ -107,7 +102,7 @@ public class PredictionCommence extends Application {
 					}
 				}
 
-				for (int i1 = 0; i1 <= 99; i1++) {
+				for (int i1 = 0; i1 <= 99; i1 = +i1) {
 
 					Card card = deck.draw();
 					root.getChildren().add(card);
@@ -135,7 +130,9 @@ public class PredictionCommence extends Application {
 
 					System.out.println("Hearts has a job and wants" + " " + ch + " " + "children");
 
-				} else {
+				}
+
+				else {
 
 					System.out.println("Hearts don't have a job and wants" + " " + ch + " " + "children");
 
@@ -146,7 +143,7 @@ public class PredictionCommence extends Application {
 				int jd = 0;
 				int cd = 0;
 
-				for (int i = 0; i < 12; i = +0) {
+				for (int i = 0; i < 12; i = +i) {
 					Card card = deck.draw();
 					root.getChildren().add(card);
 					card.setTranslateX(k * 150 - 75);
@@ -171,7 +168,7 @@ public class PredictionCommence extends Application {
 					}
 				}
 
-				for (int i1 = 0; i1 <= 99; i1++) {
+				for (int i1 = 0; i1 <= 99; i1 = +i1) {
 
 					Card card = deck.draw();
 					root.getChildren().add(card);
@@ -199,7 +196,9 @@ public class PredictionCommence extends Application {
 
 					System.out.println("Dimonds has a job and wants" + " " + cd + " " + "children");
 
-				} else {
+				}
+
+				else {
 
 					System.out.println("Dimonds don't have a job and wants" + " " + cd + " " + "children");
 
@@ -263,7 +262,9 @@ public class PredictionCommence extends Application {
 
 					System.out.println("Spades has a job and wants" + " " + cs + " " + "children");
 
-				} else {
+				}
+
+				else {
 
 					System.out.println("Spades don't have a job and wants" + " " + cs + " " + "children");
 
@@ -326,33 +327,67 @@ public class PredictionCommence extends Application {
 				if (jc == 1) {
 
 					System.out.println("Clover has a job and wants" + " " + cc + " " + "children");
+				}
 
-				} else {
+				else {
 
 					System.out.println("Clover don't have a job and wants" + " " + cc + " " + "children");
-
 				}
 
-				System.out.println("Enter H pick to hearts, D to pick Dimonds, S to pick spades and C to pick clover ");
+				primaryStage.setScene(scene);
+				primaryStage.show();
 
-				Scanner P = new Scanner(System.in);
+				for (int i = 0; i < 42; i = +i) {
 
-				String Pick = P.next();
+					System.out.println(
+							"Enter H pick to hearts, D to pick Dimonds, S to pick spades and C to pick clover ");
 
-				switch (Pick) {
-				case "H":
+					Scanner P = new Scanner(System.in);
 
-					break;
+					String Pick = P.next();
 
-				default:
-					break;
+					switch (Pick) {
+					case "H":
+
+						System.out.println(Hearts);
+
+						i = 42;
+
+						break;
+
+					case "D":
+
+						System.out.println(Dimonds);
+
+						i = 42;
+
+						break;
+
+					case "S":
+
+						System.out.println(Spade);
+
+						i = 42;
+
+						break;
+
+					case "C":
+
+						System.out.println(Clover);
+
+						i = 42;
+
+						break;
+
+					default:
+
+						i = 0;
+
+						break;
+					}
 				}
-
 			}
 			;
-
-			primaryStage.setScene(scene);
-			primaryStage.show();
 
 		});
 
