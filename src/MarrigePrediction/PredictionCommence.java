@@ -1,6 +1,5 @@
 package MarrigePrediction;
 
-
 import java.util.Scanner;
 
 import javafx.application.Application;
@@ -12,7 +11,7 @@ import javafx.stage.Stage;
 
 public class PredictionCommence extends Application {
 
-	public static final double WIDTH = 75;
+	public static final double WIDTH = 90;
 	public static final double HEIGHT = 150;
 	int k = 0;
 
@@ -29,25 +28,16 @@ public class PredictionCommence extends Application {
 		System.out.println("Enter 4 names of the possible marraige canidents");
 
 		Scanner S = new Scanner(System.in);
-
 		String Spade = S.next();
 
 		Scanner C = new Scanner(System.in);
-
 		String Clover = C.next();
 
 		Scanner H = new Scanner(System.in);
-
 		String Hearts = H.next();
 
 		Scanner D = new Scanner(System.in);
-
 		String Diamond = D.next();
-
-		// debugging //
-		System.out.println(Clover + " " + Hearts + " " + Diamond + " " + Spade);
-
-		System.out.println();
 
 		Group root = new Group();
 
@@ -57,13 +47,13 @@ public class PredictionCommence extends Application {
 		Kings royaldeck = new Kings();
 
 		Scene scene = new Scene(root, WIDTH * 16, HEIGHT * 5, Color.SKYBLUE);
-		Group pc = new Group();
 
+		Group pc = new Group();
 		root.getChildren().add(pc);
 
 		for (int i = 0; i < 4; i++) {
 			KingsCards royalcard = royaldeck.royaldraw();
-			royalcard.setTranslateX(i * 150 + 75);
+			royalcard.setTranslateX(i * HEIGHT + WIDTH);
 
 			pc.getChildren().add(royalcard);
 
@@ -84,8 +74,8 @@ public class PredictionCommence extends Application {
 				for (int i = 0; i < 12; i = +i) {
 					Card card = deck.draw();
 					pc.getChildren().add(card);
-					card.setTranslateX(k * 150 - 75);
-					card.setTranslateY(c * 150 + 150);
+					card.setTranslateX(k * HEIGHT - WIDTH);
+					card.setTranslateY(c * HEIGHT + HEIGHT);
 
 					if (RedorBlack.RedOrBlack(card) == 1) {
 
@@ -110,8 +100,8 @@ public class PredictionCommence extends Application {
 
 					Card card = deck.draw();
 					pc.getChildren().add(card);
-					card.setTranslateX(k * 150 - 75);
-					card.setTranslateY(c * 150 - 150);
+					card.setTranslateX(k * HEIGHT - WIDTH);
+					card.setTranslateY(c * HEIGHT - HEIGHT);
 
 					if (RedorBlack.RedOrBlack(card) == 1) {
 
@@ -150,8 +140,8 @@ public class PredictionCommence extends Application {
 				for (int i = 0; i < 12; i = +i) {
 					Card card = deck.draw();
 					pc.getChildren().add(card);
-					card.setTranslateX(k * 150 - 75);
-					card.setTranslateY(c * 150 + 150);
+					card.setTranslateX(k * HEIGHT - WIDTH);
+					card.setTranslateY(c * HEIGHT + HEIGHT);
 
 					if (RedorBlack.RedOrBlack(card) == 1) {
 
@@ -176,8 +166,8 @@ public class PredictionCommence extends Application {
 
 					Card card = deck.draw();
 					pc.getChildren().add(card);
-					card.setTranslateX(k * 150 - 75);
-					card.setTranslateY(c * 150 - 150);
+					card.setTranslateX(k * HEIGHT - WIDTH);
+					card.setTranslateY(c * HEIGHT - HEIGHT);
 
 					if (RedorBlack.RedOrBlack(card) == 1) {
 
@@ -216,8 +206,8 @@ public class PredictionCommence extends Application {
 				for (int i = 0; i < 12; i = +0) {
 					Card card = deck.draw();
 					pc.getChildren().add(card);
-					card.setTranslateX(k * 150 - 75);
-					card.setTranslateY(c * 150 + 150);
+					card.setTranslateX(k * HEIGHT - WIDTH);
+					card.setTranslateY(c * HEIGHT + HEIGHT);
 
 					if (RedorBlack.RedOrBlack(card) == 1) {
 
@@ -242,8 +232,8 @@ public class PredictionCommence extends Application {
 
 					Card card = deck.draw();
 					pc.getChildren().add(card);
-					card.setTranslateX(k * 150 - 75);
-					card.setTranslateY(c * 150 - 150);
+					card.setTranslateX(k * HEIGHT - WIDTH);
+					card.setTranslateY(c * HEIGHT - HEIGHT);
 
 					if (RedorBlack.RedOrBlack(card) == 1) {
 
@@ -282,8 +272,8 @@ public class PredictionCommence extends Application {
 				for (int i = 0; i < 12; i = +0) {
 					Card card = deck.draw();
 					pc.getChildren().add(card);
-					card.setTranslateX(k * 150 - 75);
-					card.setTranslateY(c * 150 + 150);
+					card.setTranslateX(k * HEIGHT - WIDTH);
+					card.setTranslateY(c * HEIGHT + HEIGHT);
 
 					if (RedorBlack.RedOrBlack(card) == 1) {
 
@@ -308,8 +298,8 @@ public class PredictionCommence extends Application {
 
 					Card card = deck.draw();
 					pc.getChildren().add(card);
-					card.setTranslateX(k * 150 - 75);
-					card.setTranslateY(c * 150 - 150);
+					card.setTranslateX(k * HEIGHT - WIDTH);
+					card.setTranslateY(c * HEIGHT - HEIGHT);
 
 					if (RedorBlack.RedOrBlack(card) == 1) {
 
@@ -337,9 +327,6 @@ public class PredictionCommence extends Application {
 
 					System.out.println("Clover don't have a job and wants" + " " + cc + " " + "children");
 				}
-
-				primaryStage.setScene(scene);
-				primaryStage.show();
 
 				for (int i = 0; i < 42; i = +i) {
 					System.out.println(
@@ -389,33 +376,11 @@ public class PredictionCommence extends Application {
 						break;
 					}
 
-					for (int j = 0; j < 42; j = +j) {
-						System.out.println("N is next ");
-
-						Scanner n = new Scanner(System.in);
-
-						String Next = n.next();
-
-						switch (Next) {
-						case "N":
-
-							j = 42;
-
-							pc.getChildren().clear();
-
-							System.out.println("test");
-
-							break;
-
-						default:
-
-							break;
-
-						}
-
-					}
-
 				}
+
+				
+
+				// leftclick
 			}
 			;
 

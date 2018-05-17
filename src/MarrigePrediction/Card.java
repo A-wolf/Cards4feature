@@ -11,7 +11,7 @@ public class Card extends Group {
 
 	int value;
 
-	public static final double WIDTH = 75;
+	public static final double WIDTH = 90;
 
 	public static final double HEIGHT = 150;
 
