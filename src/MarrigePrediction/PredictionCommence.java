@@ -69,6 +69,9 @@ public class PredictionCommence extends Application {
 		}
 
 		scene.setOnMouseClicked(event -> {
+			Group pc = new Group();
+
+			root.getChildren().add(pc);
 
 			if (event.getButton() == MouseButton.PRIMARY) {
 
@@ -79,7 +82,7 @@ public class PredictionCommence extends Application {
 
 				for (int i = 0; i < 12; i = +i) {
 					Card card = deck.draw();
-					root.getChildren().add(card);
+					pc.getChildren().add(card);
 					card.setTranslateX(k * 150 - 75);
 					card.setTranslateY(c * 150 + 150);
 
@@ -105,7 +108,7 @@ public class PredictionCommence extends Application {
 				for (int i1 = 0; i1 <= 99; i1 = +i1) {
 
 					Card card = deck.draw();
-					root.getChildren().add(card);
+					pc.getChildren().add(card);
 					card.setTranslateX(k * 150 - 75);
 					card.setTranslateY(c * 150 - 150);
 
@@ -145,7 +148,7 @@ public class PredictionCommence extends Application {
 
 				for (int i = 0; i < 12; i = +i) {
 					Card card = deck.draw();
-					root.getChildren().add(card);
+					pc.getChildren().add(card);
 					card.setTranslateX(k * 150 - 75);
 					card.setTranslateY(c * 150 + 150);
 
@@ -171,7 +174,7 @@ public class PredictionCommence extends Application {
 				for (int i1 = 0; i1 <= 99; i1 = +i1) {
 
 					Card card = deck.draw();
-					root.getChildren().add(card);
+					pc.getChildren().add(card);
 					card.setTranslateX(k * 150 - 75);
 					card.setTranslateY(c * 150 - 150);
 
@@ -211,7 +214,7 @@ public class PredictionCommence extends Application {
 
 				for (int i = 0; i < 12; i = +0) {
 					Card card = deck.draw();
-					root.getChildren().add(card);
+					pc.getChildren().add(card);
 					card.setTranslateX(k * 150 - 75);
 					card.setTranslateY(c * 150 + 150);
 
@@ -237,7 +240,7 @@ public class PredictionCommence extends Application {
 				for (int i1 = 0; i1 <= 99; i1++) {
 
 					Card card = deck.draw();
-					root.getChildren().add(card);
+					pc.getChildren().add(card);
 					card.setTranslateX(k * 150 - 75);
 					card.setTranslateY(c * 150 - 150);
 
@@ -277,7 +280,7 @@ public class PredictionCommence extends Application {
 
 				for (int i = 0; i < 12; i = +0) {
 					Card card = deck.draw();
-					root.getChildren().add(card);
+					pc.getChildren().add(card);
 					card.setTranslateX(k * 150 - 75);
 					card.setTranslateY(c * 150 + 150);
 
@@ -303,7 +306,7 @@ public class PredictionCommence extends Application {
 				for (int i1 = 0; i1 <= 99; i1++) {
 
 					Card card = deck.draw();
-					root.getChildren().add(card);
+					pc.getChildren().add(card);
 					card.setTranslateX(k * 150 - 75);
 					card.setTranslateY(c * 150 - 150);
 
