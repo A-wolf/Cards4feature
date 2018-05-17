@@ -1,5 +1,6 @@
 package MarrigePrediction;
 
+
 import java.util.Scanner;
 
 import javafx.application.Application;
@@ -41,10 +42,10 @@ public class PredictionCommence extends Application {
 
 		Scanner D = new Scanner(System.in);
 
-		String Dimonds = D.next();
+		String Diamond = D.next();
 
 		// debugging //
-		System.out.println(Clover + " " + Hearts + " " + Dimonds + " " + Spade);
+		System.out.println(Clover + " " + Hearts + " " + Diamond + " " + Spade);
 
 		System.out.println();
 
@@ -55,7 +56,7 @@ public class PredictionCommence extends Application {
 
 		Kings royaldeck = new Kings();
 
-		Scene scene = new Scene(root, WIDTH * 16, HEIGHT * 4.66, Color.SKYBLUE);
+		Scene scene = new Scene(root, WIDTH * 16, HEIGHT * 5, Color.SKYBLUE);
 		Group pc = new Group();
 
 		root.getChildren().add(pc);
@@ -197,13 +198,13 @@ public class PredictionCommence extends Application {
 				}
 				if (jd == 1) {
 
-					System.out.println("Dimonds has a job and wants" + " " + cd + " " + "children");
+					System.out.println("Diamond has a job and wants" + " " + cd + " " + "children");
 
 				}
 
 				else {
 
-					System.out.println("Dimonds don't have a job and wants" + " " + cd + " " + "children");
+					System.out.println("Diamond don't have a job and wants" + " " + cd + " " + "children");
 
 				}
 
@@ -359,7 +360,7 @@ public class PredictionCommence extends Application {
 
 					case "D":
 
-						System.out.println(Dimonds);
+						System.out.println(Diamond);
 
 						i = 42;
 
@@ -409,6 +410,7 @@ public class PredictionCommence extends Application {
 						default:
 
 							break;
+
 						}
 
 					}

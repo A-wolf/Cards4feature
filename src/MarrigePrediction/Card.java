@@ -32,7 +32,7 @@ public class Card extends Group {
 			break;
 
 		case 4:
-			color = "Dimonds";
+			color = "Diamond";
 			break;
 		}
 
@@ -67,9 +67,9 @@ public class Card extends Group {
 		}
 
 		Rectangle background = new Rectangle(WIDTH, HEIGHT);
-		background.setFill(Color.WHITE);
+		background.setFill(Color.LIME);
 		background.setStroke(Color.BLACK);
-		background.setStrokeWidth(5);
+		background.setStrokeWidth(3);
 
 		TheCardColor.setTranslateX(WIDTH / 2 - (WIDTH / 4));
 		TheCardColor.setTranslateY(HEIGHT / 4);

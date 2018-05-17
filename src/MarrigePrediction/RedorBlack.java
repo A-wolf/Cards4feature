@@ -19,7 +19,7 @@ public class RedorBlack {
 
 		}
 
-		else if (c.color.equals("Dimonds")) {
+		else if (c.color.equals("Diamond")) {
 			return 1;
 
 		}
