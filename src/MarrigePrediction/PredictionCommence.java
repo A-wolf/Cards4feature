@@ -15,6 +15,7 @@ public class PredictionCommence extends Application {
 	public static final double WIDTH = 90;
 	public static final double HEIGHT = 150;
 	int k = 0;
+	int w = 1337;
 
 	public static void main(String[] args) {
 
@@ -48,6 +49,9 @@ public class PredictionCommence extends Application {
 		Kings royaldeck = new Kings();
 
 		Scene scene = new Scene(root, WIDTH * 16, HEIGHT * 5, Color.SKYBLUE);
+		primaryStage.setResizable(false);
+		primaryStage.setTitle("BlackJack");
+		primaryStage.show();
 
 		Group pc = new Group();
 		root.getChildren().add(pc);
@@ -68,321 +72,357 @@ public class PredictionCommence extends Application {
 
 			if (event.getButton() == MouseButton.PRIMARY) {
 
-				int c = 1;
-				int jh = 0;
-				int ch = 0;
-				int k = 0;
+				if (w == 1337) {
 
-				for (int i = 0; i < 12; i = +i) {
-					Card card = deck.draw();
-					pc.getChildren().add(card);
-					card.setTranslateX(k * 2 * WIDTH + WIDTH);
-					card.setTranslateY(c * HEIGHT + HEIGHT + P);
+					int c = 1;
+					int jh = 0;
+					int ch = 0;
+					int k = 0;
 
-					if (RedorBlack.RedOrBlack(card) == 1) {
+					for (int i = 0; i < 12; i = +i) {
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(k * 2 * WIDTH + WIDTH);
+						card.setTranslateY(c * HEIGHT + HEIGHT + P);
 
-						jh = 1;
+						if (RedorBlack.RedOrBlack(card) == 1) {
 
-						c++;
+							jh = 1;
 
-						break;
+							c++;
 
-					} else {
+							break;
 
-						jh = 0;
+						} else {
 
-						c++;
+							jh = 0;
 
-						break;
+							c++;
 
-					}
-				}
+							break;
 
-				for (int i1 = 0; i1 <= 99; i1 = +i1) {
-
-					Card card = deck.draw();
-					pc.getChildren().add(card);
-					card.setTranslateX(k * 2 * WIDTH + WIDTH);
-					card.setTranslateY(c * HEIGHT - HEIGHT + P);
-
-					if (RedorBlack.RedOrBlack(card) == 1) {
-
-						ch++;
-
-						c++;
-
+						}
 					}
 
-					else {
+					for (int i1 = 0; i1 <= 99; i1 = +i1) {
 
-						i1 = 100;
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(k * 2 * WIDTH + WIDTH);
+						card.setTranslateY(c * HEIGHT - HEIGHT + P);
 
-						break;
+						if (RedorBlack.RedOrBlack(card) == 1) {
 
-					}
+							ch++;
 
-				}
-				if (jh == 1) {
+							c++;
 
-					System.out.println("Hearts has a job and wants" + " " + ch + " " + "children");
+						}
 
-				}
+						else {
 
-				else {
+							i1 = 100;
 
-					System.out.println("Hearts don't have a job and wants" + " " + ch + " " + "children");
+							break;
 
-				}
-
-				c = 1;
-				k = 1;
-				int jd = 0;
-				int cd = 0;
-
-				for (int i = 0; i < 12; i = +i) {
-					Card card = deck.draw();
-					pc.getChildren().add(card);
-					card.setTranslateX(k * 2 * WIDTH + WIDTH);
-					card.setTranslateY(c * HEIGHT + HEIGHT + P);
-
-					if (RedorBlack.RedOrBlack(card) == 1) {
-
-						jd = 1;
-
-						c++;
-
-						break;
-
-					} else {
-
-						jd = 0;
-
-						c++;
-
-						break;
+						}
 
 					}
-				}
+					if (jh == 1) {
 
-				for (int i1 = 0; i1 <= 99; i1 = +i1) {
-
-					Card card = deck.draw();
-					pc.getChildren().add(card);
-					card.setTranslateX(k * 2 * WIDTH + WIDTH);
-					card.setTranslateY(c * HEIGHT - HEIGHT + P);
-
-					if (RedorBlack.RedOrBlack(card) == 1) {
-
-						cd++;
-
-						c++;
+						System.out.println("Hearts has a job and wants" + " " + ch + " " + "children");
 
 					}
 
 					else {
 
-						i1 = 100;
-
-						break;
+						System.out.println("Hearts don't have a job and wants" + " " + ch + " " + "children");
 
 					}
 
-				}
-				if (jd == 1) {
+					c = 1;
+					k = 1;
+					int jd = 0;
+					int cd = 0;
 
-					System.out.println("Diamond has a job and wants" + " " + cd + " " + "children");
+					for (int i = 0; i < 12; i = +i) {
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(k * 2 * WIDTH + WIDTH);
+						card.setTranslateY(c * HEIGHT + HEIGHT + P);
 
-				}
+						if (RedorBlack.RedOrBlack(card) == 1) {
 
-				else {
+							jd = 1;
 
-					System.out.println("Diamond don't have a job and wants" + " " + cd + " " + "children");
+							c++;
 
-				}
+							break;
 
-				c = 1;
-				k = 2;
-				int js = 0;
-				int cs = 0;
+						} else {
 
-				for (int i = 0; i < 12; i = +0) {
-					Card card = deck.draw();
-					pc.getChildren().add(card);
-					card.setTranslateX(k * 2 * WIDTH + WIDTH);
-					card.setTranslateY(c * HEIGHT + HEIGHT);
+							jd = 0;
 
-					if (RedorBlack.RedOrBlack(card) == 1) {
+							c++;
 
-						js = 1;
+							break;
 
-						c++;
-
-						break;
-
-					} else {
-
-						js = 0;
-
-						c++;
-
-						break;
-
-					}
-				}
-
-				for (int i1 = 0; i1 <= 99; i1++) {
-
-					Card card = deck.draw();
-					pc.getChildren().add(card);
-					card.setTranslateX(k * 2 * WIDTH + WIDTH);
-					card.setTranslateY(c * HEIGHT - HEIGHT);
-
-					if (RedorBlack.RedOrBlack(card) == 1) {
-
-						cs++;
-
-						c++;
-
+						}
 					}
 
-					else {
+					for (int i1 = 0; i1 <= 99; i1 = +i1) {
 
-						i1 = 100;
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(k * 2 * WIDTH + WIDTH);
+						card.setTranslateY(c * HEIGHT - HEIGHT + P);
 
-						break;
+						if (RedorBlack.RedOrBlack(card) == 1) {
 
-					}
+							cd++;
 
-				}
-				if (js == 1) {
+							c++;
 
-					System.out.println("Spades has a job and wants" + " " + cs + " " + "children");
+						}
 
-				}
+						else {
 
-				else {
+							i1 = 100;
 
-					System.out.println("Spades don't have a job and wants" + " " + cs + " " + "children");
+							break;
 
-				}
-
-				c = 1;
-				k = 3;
-				int jc = 0;
-				int cc = 0;
-
-				for (int i = 0; i < 12; i = +0) {
-					Card card = deck.draw();
-					pc.getChildren().add(card);
-					card.setTranslateX(k * 2 * WIDTH + WIDTH);
-					card.setTranslateY(c * HEIGHT + HEIGHT);
-
-					if (RedorBlack.RedOrBlack(card) == 1) {
-
-						jc = 1;
-
-						c++;
-
-						break;
-
-					} else {
-
-						jc = 0;
-
-						c++;
-
-						break;
+						}
 
 					}
-				}
+					if (jd == 1) {
 
-				for (int i1 = 0; i1 <= 99; i1++) {
-
-					Card card = deck.draw();
-					pc.getChildren().add(card);
-					card.setTranslateX(k * 2 * WIDTH + WIDTH);
-					card.setTranslateY(c * HEIGHT - HEIGHT);
-
-					if (RedorBlack.RedOrBlack(card) == 1) {
-
-						cc++;
-
-						c++;
+						System.out.println("Diamond has a job and wants" + " " + cd + " " + "children");
 
 					}
 
 					else {
 
-						i1 = 100;
-
-						break;
+						System.out.println("Diamond don't have a job and wants" + " " + cd + " " + "children");
 
 					}
 
-				}
-				if (jc == 1) {
+					c = 1;
+					k = 2;
+					int js = 0;
+					int cs = 0;
 
-					System.out.println("Clover has a job and wants" + " " + cc + " " + "children");
-				}
+					for (int i = 0; i < 12; i = +0) {
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(k * 2 * WIDTH + WIDTH);
+						card.setTranslateY(c * HEIGHT + HEIGHT);
 
-				else {
+						if (RedorBlack.RedOrBlack(card) == 1) {
 
-					System.out.println("Clover don't have a job and wants" + " " + cc + " " + "children");
-				}
+							js = 1;
 
-				for (int i = 0; i < 42; i = +i) {
-					System.out.println(
-							"Enter H pick to hearts, D to pick Dimonds, S to pick spades and C to pick clover ");
+							c++;
 
-					Scanner P = new Scanner(System.in);
+							break;
 
-					String Pick = P.next();
+						} else {
 
-					switch (Pick) {
-					case "H":
+							js = 0;
 
-						System.out.println(Hearts);
+							c++;
 
-						i = 42;
+							break;
 
-						break;
-
-					case "D":
-
-						System.out.println(Diamond);
-
-						i = 42;
-
-						break;
-
-					case "S":
-
-						System.out.println(Spade);
-
-						i = 42;
-
-						break;
-
-					case "C":
-
-						System.out.println(Clover);
-
-						i = 42;
-
-						break;
-
-					default:
-
-						i = 0;
-
-						break;
+						}
 					}
 
+					for (int i1 = 0; i1 <= 99; i1++) {
+
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(k * 2 * WIDTH + WIDTH);
+						card.setTranslateY(c * HEIGHT - HEIGHT);
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							cs++;
+
+							c++;
+
+						}
+
+						else {
+
+							i1 = 100;
+
+							break;
+
+						}
+
+					}
+					if (js == 1) {
+
+						System.out.println("Spades has a job and wants" + " " + cs + " " + "children");
+
+					}
+
+					else {
+
+						System.out.println("Spades don't have a job and wants" + " " + cs + " " + "children");
+
+					}
+
+					c = 1;
+					k = 3;
+					int jc = 0;
+					int cc = 0;
+
+					for (int i = 0; i < 12; i = +0) {
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(k * 2 * WIDTH + WIDTH);
+						card.setTranslateY(c * HEIGHT + HEIGHT);
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							jc = 1;
+
+							c++;
+
+							break;
+
+						} else {
+
+							jc = 0;
+
+							c++;
+
+							break;
+
+						}
+					}
+
+					for (int i1 = 0; i1 <= 99; i1++) {
+
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(k * 2 * WIDTH + WIDTH);
+						card.setTranslateY(c * HEIGHT - HEIGHT);
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							cc++;
+
+							c++;
+
+						}
+
+						else {
+
+							i1 = 100;
+
+							break;
+
+						}
+
+					}
+					if (jc == 1) {
+
+						System.out.println("Clover has a job and wants" + " " + cc + " " + "children");
+					}
+
+					else {
+
+						System.out.println("Clover don't have a job and wants" + " " + cc + " " + "children");
+					}
+
+					primaryStage.setScene(scene);
+					primaryStage.show();
+
+					w = 7;
 				}
 
-				// leftclick
+				else if (w == 7) {
+
+					for (int i = 0; i < 42; i = +i) {
+						System.out.println(
+								"Enter H pick to hearts, D to pick Dimonds, S to pick spades and C to pick clover ");
+
+						Scanner P = new Scanner(System.in);
+
+						String Pick = P.next();
+
+						switch (Pick) {
+						case "H":
+
+							System.out.println(Hearts);
+
+							i = 42;
+
+							break;
+
+						case "D":
+
+							System.out.println(Diamond);
+
+							i = 42;
+
+							break;
+
+						case "S":
+
+							System.out.println(Spade);
+
+							i = 42;
+
+							break;
+
+						case "C":
+
+							System.out.println(Clover);
+
+							i = 42;
+
+							break;
+
+						default:
+
+							i = 0;
+
+							break;
+						}
+
+					}
+					w = 420;
+				}
+
+				else if (w == 420) {
+					for (int j = 0; j < 42; j = +j) {
+						System.out.println("N is next ");
+
+						Scanner n = new Scanner(System.in);
+
+						String Next = n.next();
+
+						switch (Next) {
+						case "N":
+
+							j = 42;
+
+							pc.getChildren().clear();
+
+							System.out.println("test");
+
+							break;
+
+						default:
+
+							break;
+
+						}
+					}
+				}
 			}
-			;
 
 		});
 
