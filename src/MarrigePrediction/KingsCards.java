@@ -24,15 +24,15 @@ public class KingsCards extends Group {
 			break;
 
 		case 2:
-			color = "Spade";
+			color = "Diamond";
 			break;
 
 		case 3:
-			color = "Clover";
+			color = "Spades";
 			break;
 
 		case 4:
-			color = "Diamond";
+			color = "Clover";
 			break;
 		}
 
