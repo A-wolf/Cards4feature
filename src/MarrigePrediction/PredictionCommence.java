@@ -15,7 +15,9 @@ public class PredictionCommence extends Application {
 	public static final double WIDTH = 90;
 	public static final double HEIGHT = 150;
 	int k = 0;
-	int w = 1337;
+	int y = 0;
+	int u = 0;
+	int w = 1;
 
 	public static void main(String[] args) {
 
@@ -40,7 +42,7 @@ public class PredictionCommence extends Application {
 
 		Scanner D = new Scanner(System.in);
 		String Diamond = D.next();
-
+		System.out.println("Click in window to play");
 		Group root = new Group();
 
 		Future deck = new Future();
@@ -72,14 +74,14 @@ public class PredictionCommence extends Application {
 
 			if (event.getButton() == MouseButton.PRIMARY) {
 
-				if (w == 1337) {
+				if (w == 1) {
 
 					int c = 1;
 					int jh = 0;
 					int ch = 0;
 					int k = 0;
 
-					for (int i = 0; i < 12; i = +i) {
+					for (int i = 0; i < 42; i = +i) {
 						Card card = deck.draw();
 						pc.getChildren().add(card);
 						card.setTranslateX(k * 2 * WIDTH + WIDTH);
@@ -104,7 +106,7 @@ public class PredictionCommence extends Application {
 						}
 					}
 
-					for (int i1 = 0; i1 <= 99; i1 = +i1) {
+					for (int i1 = 0; i1 <= 42; i1 = +i1) {
 
 						Card card = deck.draw();
 						pc.getChildren().add(card);
@@ -145,7 +147,7 @@ public class PredictionCommence extends Application {
 					int jd = 0;
 					int cd = 0;
 
-					for (int i = 0; i < 12; i = +i) {
+					for (int i = 0; i < 42; i = +i) {
 						Card card = deck.draw();
 						pc.getChildren().add(card);
 						card.setTranslateX(k * 2 * WIDTH + WIDTH);
@@ -170,7 +172,7 @@ public class PredictionCommence extends Application {
 						}
 					}
 
-					for (int i1 = 0; i1 <= 99; i1 = +i1) {
+					for (int i1 = 0; i1 <= 42; i1 = +i1) {
 
 						Card card = deck.draw();
 						pc.getChildren().add(card);
@@ -211,7 +213,7 @@ public class PredictionCommence extends Application {
 					int js = 0;
 					int cs = 0;
 
-					for (int i = 0; i < 12; i = +0) {
+					for (int i = 0; i < 42; i = +0) {
 						Card card = deck.draw();
 						pc.getChildren().add(card);
 						card.setTranslateX(k * 2 * WIDTH + WIDTH);
@@ -236,7 +238,7 @@ public class PredictionCommence extends Application {
 						}
 					}
 
-					for (int i1 = 0; i1 <= 99; i1++) {
+					for (int i1 = 0; i1 <= 42; i1++) {
 
 						Card card = deck.draw();
 						pc.getChildren().add(card);
@@ -277,7 +279,7 @@ public class PredictionCommence extends Application {
 					int jc = 0;
 					int cc = 0;
 
-					for (int i = 0; i < 12; i = +0) {
+					for (int i = 0; i < 42; i = +0) {
 						Card card = deck.draw();
 						pc.getChildren().add(card);
 						card.setTranslateX(k * 2 * WIDTH + WIDTH);
@@ -302,7 +304,7 @@ public class PredictionCommence extends Application {
 						}
 					}
 
-					for (int i1 = 0; i1 <= 99; i1++) {
+					for (int i1 = 0; i1 <= 42; i1++) {
 
 						Card card = deck.draw();
 						pc.getChildren().add(card);
@@ -339,10 +341,13 @@ public class PredictionCommence extends Application {
 					primaryStage.setScene(scene);
 					primaryStage.show();
 
-					w = 7;
+					w++;
+
+					System.out.println("Click in window to continue");
+
 				}
 
-				else if (w == 7) {
+				else if (w == 2) {
 
 					for (int i = 0; i < 42; i = +i) {
 						System.out.println(
@@ -393,34 +398,231 @@ public class PredictionCommence extends Application {
 						}
 
 					}
-					w = 420;
+
+					System.out.println("Click in window to continue");
+
+					w++;
+
 				}
 
-				else if (w == 420) {
-					for (int j = 0; j < 42; j = +j) {
-						System.out.println("N is next ");
+				else if (w == 3) {
 
-						Scanner n = new Scanner(System.in);
+					pc.getChildren().clear();
 
-						String Next = n.next();
+					System.out.println("Click in window to continue");
 
-						switch (Next) {
-						case "N":
+					w++;
+				}
 
-							j = 42;
+				else if (w == 4) {
 
-							pc.getChildren().clear();
+					if (u == 0) {
+						System.out.println("You invite first of three guests for you ");
 
-							System.out.println("test");
+						Scanner g = new Scanner(System.in);
 
-							break;
+						String G = g.next();
 
-						default:
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(y * 2 * WIDTH + WIDTH);
+						card.setTranslateY(4 * HEIGHT);
 
-							break;
+						y++;
+
+						primaryStage.setScene(scene);
+						primaryStage.show();
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							u++;
+
+							System.out.println(G + " " + "is comming ");
+
+						} else {
+
+							u++;
+
+							System.out.println(G + " " + "is not comming ");
 
 						}
+						System.out.println("Click in window to continue");
+
+					} else if (u == 1) {
+
+						System.out.println("You invite second of three guests for you ");
+
+						Scanner g = new Scanner(System.in);
+
+						String G = g.next();
+
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(y * 2 * WIDTH + WIDTH);
+						card.setTranslateY(4 * HEIGHT);
+
+						y++;
+
+						primaryStage.setScene(scene);
+						primaryStage.show();
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							u++;
+
+							System.out.println(G + " " + "is comming ");
+
+						} else {
+
+							u++;
+
+							System.out.println(G + " " + "is not comming ");
+
+						}
+						System.out.println("Click in window to continue");
+
 					}
+
+					else if (u == 2) {
+
+						System.out.println("You invite third of three guests for you ");
+
+						Scanner g = new Scanner(System.in);
+
+						String G = g.next();
+
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(y * 2 * WIDTH + WIDTH);
+						card.setTranslateY(4 * HEIGHT);
+
+						y++;
+
+						y++;
+
+						y++;
+
+						primaryStage.setScene(scene);
+						primaryStage.show();
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							u++;
+							System.out.println(G + " " + "is comming ");
+
+						} else {
+
+							u++;
+
+							System.out.println(G + " " + "is not comming ");
+
+						}
+						System.out.println("Click in window to continue");
+
+					}
+
+					if (u == 3) {
+						System.out.println("You invite first of three guests for them ");
+
+						Scanner g = new Scanner(System.in);
+
+						String G = g.next();
+
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(y * 2 * WIDTH + WIDTH);
+						card.setTranslateY(4 * HEIGHT);
+
+						y++;
+
+						primaryStage.setScene(scene);
+						primaryStage.show();
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							u++;
+
+							System.out.println(G + " " + "is comming ");
+
+						} else {
+
+							u++;
+
+							System.out.println(G + " " + "is not comming ");
+
+						}
+						System.out.println("Click in window to continue");
+
+					}
+
+					if (u == 4) {
+						System.out.println("You invite second of three guests for them ");
+
+						Scanner g = new Scanner(System.in);
+
+						String G = g.next();
+
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(y * 2 * WIDTH + WIDTH);
+						card.setTranslateY(4 * HEIGHT);
+
+						y++;
+
+						primaryStage.setScene(scene);
+						primaryStage.show();
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							u++;
+
+							System.out.println(G + " " + "is comming ");
+
+						} else {
+
+							u++;
+
+							System.out.println(G + " " + "is not comming ");
+
+						}
+						System.out.println("Click in window to continue");
+
+					}
+
+					if (u == 5) {
+						System.out.println("You invite third of three guests for them ");
+
+						Scanner g = new Scanner(System.in);
+
+						String G = g.next();
+
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(y * 2 * WIDTH + WIDTH);
+						card.setTranslateY(4 * HEIGHT);
+
+						y++;
+
+						primaryStage.setScene(scene);
+						primaryStage.show();
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							u++;
+
+							System.out.println(G + " " + "is comming ");
+
+						} else {
+
+							u++;
+
+							System.out.println(G + " " + "is not comming ");
+
+						}
+						System.out.println("Click in window to continue");
+
+					}
+
 				}
 			}
 
