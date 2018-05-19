@@ -52,7 +52,7 @@ public class PredictionCommence extends Application {
 
 		Scene scene = new Scene(root, WIDTH * 16, HEIGHT * 5, Color.SKYBLUE);
 		primaryStage.setResizable(false);
-		primaryStage.setTitle("BlackJack");
+		primaryStage.setTitle("Marrige predictor");
 		primaryStage.show();
 
 		Group pc = new Group();
@@ -399,7 +399,7 @@ public class PredictionCommence extends Application {
 
 					}
 
-					System.out.println("Click in window to continue");
+					System.out.println("Click in window to clear the board");
 
 					w++;
 
@@ -409,7 +409,7 @@ public class PredictionCommence extends Application {
 
 					pc.getChildren().clear();
 
-					System.out.println("Click in window to continue");
+					System.out.println("Click in window to move on to invíting guests");
 
 					w++;
 				}
@@ -417,6 +417,8 @@ public class PredictionCommence extends Application {
 				else if (w == 4) {
 
 					if (u == 0) {
+
+						System.out.println("After you enter a guest's name click in the window ");
 						System.out.println("You invite first of three guests for you ");
 
 						Scanner g = new Scanner(System.in);
@@ -446,7 +448,6 @@ public class PredictionCommence extends Application {
 							System.out.println(G + " " + "is not comming ");
 
 						}
-						System.out.println("Click in window to continue");
 
 					} else if (u == 1) {
 
@@ -479,7 +480,6 @@ public class PredictionCommence extends Application {
 							System.out.println(G + " " + "is not comming ");
 
 						}
-						System.out.println("Click in window to continue");
 
 					}
 
@@ -517,7 +517,6 @@ public class PredictionCommence extends Application {
 							System.out.println(G + " " + "is not comming ");
 
 						}
-						System.out.println("Click in window to continue");
 
 					}
 
@@ -530,7 +529,7 @@ public class PredictionCommence extends Application {
 
 						Card card = deck.draw();
 						pc.getChildren().add(card);
-						card.setTranslateX(y * 2 * WIDTH + WIDTH);
+						card.setTranslateX(y * 2 * WIDTH);
 						card.setTranslateY(4 * HEIGHT);
 
 						y++;
@@ -551,7 +550,6 @@ public class PredictionCommence extends Application {
 							System.out.println(G + " " + "is not comming ");
 
 						}
-						System.out.println("Click in window to continue");
 
 					}
 
@@ -564,7 +562,7 @@ public class PredictionCommence extends Application {
 
 						Card card = deck.draw();
 						pc.getChildren().add(card);
-						card.setTranslateX(y * 2 * WIDTH + WIDTH);
+						card.setTranslateX(y * 2 * WIDTH);
 						card.setTranslateY(4 * HEIGHT);
 
 						y++;
@@ -585,7 +583,6 @@ public class PredictionCommence extends Application {
 							System.out.println(G + " " + "is not comming ");
 
 						}
-						System.out.println("Click in window to continue");
 
 					}
 
@@ -598,7 +595,7 @@ public class PredictionCommence extends Application {
 
 						Card card = deck.draw();
 						pc.getChildren().add(card);
-						card.setTranslateX(y * 2 * WIDTH + WIDTH);
+						card.setTranslateX(y * 2 * WIDTH);
 						card.setTranslateY(4 * HEIGHT);
 
 						y++;
@@ -619,7 +616,106 @@ public class PredictionCommence extends Application {
 							System.out.println(G + " " + "is not comming ");
 
 						}
-						System.out.println("Click in window to continue");
+
+					}
+
+					if (u == 6) {
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(2 * WIDTH);
+						card.setTranslateY(3 * HEIGHT);
+
+						primaryStage.setScene(scene);
+						primaryStage.show();
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							u++;
+
+							System.out.println("Your mother is comming ");
+
+						} else {
+
+							u++;
+
+							System.out.println("Your mother is not comming ");
+
+						}
+
+					}
+
+					if (u == 7) {
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(4 * WIDTH);
+						card.setTranslateY(3 * HEIGHT);
+
+						primaryStage.setScene(scene);
+						primaryStage.show();
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							u++;
+
+							System.out.println("Your father is comming ");
+
+						} else {
+
+							u++;
+
+							System.out.println("Your father is not comming ");
+
+						}
+
+					}
+
+					if (u == 8) {
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(11 * WIDTH);
+						card.setTranslateY(3 * HEIGHT);
+
+						primaryStage.setScene(scene);
+						primaryStage.show();
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							u++;
+
+							System.out.println("Their mother is comming ");
+
+						} else {
+
+							u++;
+
+							System.out.println("Their mother is not comming ");
+
+						}
+
+					}
+
+					if (u == 9) {
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(13 * WIDTH);
+						card.setTranslateY(3 * HEIGHT);
+
+						primaryStage.setScene(scene);
+						primaryStage.show();
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							u++;
+
+							System.out.println("Their father is comming ");
+
+						} else {
+
+							u++;
+
+							System.out.println("Their father is not comming ");
+
+						}
 
 					}
 
