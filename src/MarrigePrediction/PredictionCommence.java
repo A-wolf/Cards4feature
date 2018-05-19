@@ -343,7 +343,7 @@ public class PredictionCommence extends Application {
 
 					w++;
 
-					System.out.println("Click in window to continue");
+					System.out.println("Click in window to choice your partner");
 
 				}
 
