@@ -719,6 +719,107 @@ public class PredictionCommence extends Application {
 
 					}
 
+					if (u == 10) {
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(3 * WIDTH);
+						card.setTranslateY(2 * HEIGHT);
+
+						primaryStage.setScene(scene);
+						primaryStage.show();
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							u++;
+
+							System.out.println("You are comming ");
+
+						} else {
+
+							u++;
+
+							System.out.println("You are not comming ");
+
+						}
+
+					}
+
+					if (u == 11) {
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(12 * WIDTH);
+						card.setTranslateY(2 * HEIGHT);
+
+						primaryStage.setScene(scene);
+						primaryStage.show();
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							u++;
+
+							System.out.println("They are comming ");
+
+						} else {
+
+							u++;
+
+							System.out.println("They are not comming ");
+
+						}
+
+					}
+
+					if (u == 12) {
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(WIDTH * 7.5);
+						card.setTranslateY(1 * HEIGHT);
+
+						primaryStage.setScene(scene);
+						primaryStage.show();
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							u++;
+
+							System.out.println("The priest is comming ");
+
+						} else {
+
+							u++;
+
+							System.out.println("The priest is not comming ");
+
+						}
+
+					}
+
+					if (u == 13) {
+						Card card = deck.draw();
+						pc.getChildren().add(card);
+						card.setTranslateX(WIDTH * 7.5);
+						card.setTranslateY(0 * HEIGHT);
+
+						primaryStage.setScene(scene);
+						primaryStage.show();
+
+						if (RedorBlack.RedOrBlack(card) == 1) {
+
+							u++;
+
+							System.out.println("You get married ");
+							w++;
+
+						} else {
+
+							u++;
+
+							System.out.println("You don't get married ");
+							w++;
+						}
+
+					}
+
 				}
 			}
 
